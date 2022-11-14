@@ -7,7 +7,7 @@
     
 }
 @media screen and (min-width: 380px){
-    .conteiner{
+    .pokemons{
         grid-template-columns: 1fr;
     }
     
@@ -15,13 +15,13 @@
 
 
 @media screen and (min-width: 576px){
-    .conteiner{
+    .pokemons{
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .conteiner {
+    .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

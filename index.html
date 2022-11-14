@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https: //fonts.googleapis.com/css2? family= Roboto:wght@100;300;500;700 & 
-    display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./mediaScreen.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/mediaScreen.css">
     <title>POKEDEX</title>
     
 </head>
@@ -18,7 +17,7 @@
 <body>
     <section class="content">
         <h1>Pokedex</h1>
-        <ol class="conteiner">
+        <ol id="pokemonList" class="pokemons">
             <li class="card">
                 <span class="number">#001</span>
                 <span class="name">Bulbasaur</span>
@@ -30,31 +29,13 @@
                         <img src="./img/bulbasaur-logo-8A27924C02-seeklogo.com.png" alt="Bulbasaur">
                     </div>
             </li>
-           <!--
-            <li>Ivysaur
-                <img src="./img/ivysaur.png" alt="Ivysaur">
-            </li>
-            <li>Venusaur
-                <img src="./img/venusaur.png" alt="Venusaur">
-            </li>
-            <li>Charmander
-                <img src="./img/charmander.png" alt="Charmander">
-            </li>
-            <li>Charmeleon
-                <img src="./img/charmeleon.png" alt="Charmeleon">
-            </li>
-            <li>Charizard
-                <img src="./img/charizard.png" alt="Charizard">
-            </li>
+           
         </ol>
-        --> 
-
-
 
     </section>
 
-
-    <script src="./script.js"></script>
+    <script src="./script/poke-api.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

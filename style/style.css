@@ -13,7 +13,7 @@ body{
 }
 
 
-.conteiner {
+.pokemons {
     display: grid;
     grid-template-columns: 1fr;
     list-style: none;
