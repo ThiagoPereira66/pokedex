@@ -3,7 +3,7 @@
 // função para mostrar oq eu quero converter e retornar
 function convertPokemonToLi(pokemon){
    return `<li class="card">
-                <span class="number">#001</span>
+                <span class="number">${pokemon.order}</span>
                 <span class="name">${pokemon.name}</span>
                 <div class="imagens">
                     <ol class="types">
@@ -17,18 +17,13 @@ function convertPokemonToLi(pokemon){
     `
 }
 
-const pokemonLt = document.getElementById('pokemonList') //para importar do HTML oq eu quero adicionar
+const pokemonList = document.getElementById('pokemonList') //para importar do HTML oq eu quero adicionar
 
 
-pokeApi.getPokemons().then((pokemonsList) =>{     //agora fazendo a introdução dos elementos
-                
-       for (let i = 0; i < pokemonsList.length; i++) {
-          const pokemon = pokemonsList[i];
-          pokemonLt.innerHTML += convertPokemonToLi(pokemon) //linkando o HTML e aplicando mais elementos
-            
-       }
-
-    })
+pokeApi.getPokemons().then((pokemons = []) =>{     //agora fazendo a introdução dos elementos
+    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('') // linca o html (pokemons.map) mapear o conteudo "join('')" cria um novo arquivo
+})
+  
 
     
 
