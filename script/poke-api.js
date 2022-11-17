@@ -1,12 +1,21 @@
 
 const pokeApi = {}
 
+function convertPokeapiDetaoilToPokemons(pokeDetail){
+    const pokemon = new pokemon()
+    pokemon.namber = pokeDetail.namber
+    pokemon.name = pokeDetail.name
+    pokemon.type = pokeDetail.type
+    pokemon.photo = pokeDetail.img
+    return pokemon
+}
+
 pokeApi.getPokemonsDetail = (pokemon) => { //criando um get de pesquisa
     return fetch(pokemon.url) // buscar na "url pokemon"
     .then((response) => response.json()) // resultado da pesquisa retornar como json
 }
 
-pokeApi.getPokemons = (offset=1, limit=10) => {
+pokeApi.getPokemons = (offset=1, limit=5) => {
 
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
        return fetch(url)   // se a "url" der serto

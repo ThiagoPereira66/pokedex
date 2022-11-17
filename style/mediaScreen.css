@@ -24,4 +24,14 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    
+    button {
+        cursor: pointer;
+    }
+    button:hover{
+        background: red;
+    }
+    button:active{
+        opacity: .3;
+    }
 }

@@ -73,4 +73,19 @@ body{
     height: 70px;
 }
 
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 7px;
+    padding: 7px;
+    
+    
+}
 

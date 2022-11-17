@@ -3,14 +3,14 @@
 // função para mostrar oq eu quero converter e retornar
 function convertPokemonToLi(pokemon){
    return `<li class="card">
-                <span class="number">${pokemon.order}</span>
+                <span class="number">${pokemon.namber}</span>
                 <span class="name">${pokemon.name}</span>
                 <div class="imagens">
                     <ol class="types">
                         <li class="type">grass</li>
                         <li class="type">poison</li>
                     </ol>
-                    <img src="./img/bulbasaur-logo-8A27924C02-seeklogo.com.png" alt="${pokemon.name}">
+                    <img src="./img/${pokemon.name}.png" alt="${pokemon.name}">
                 </div>
             </li>
     
