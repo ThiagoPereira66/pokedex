@@ -1,9 +1,22 @@
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    background-color: rgb(247, 245, 243);
+
+.body{
+    display: block;
+    position: fixed;
+    height: 100vh;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    color: #e1e115;
+    text-shadow: 2px 5px 6px #f20505;
+    font-size: 27px;
 }
 
 .content {
@@ -24,14 +37,20 @@ body{
 }
 
 .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
     padding: 1rem 1rem;
-    background-color: #49d0b0;
+    background-color: rgb(40 ,178 ,27 , .6);
     border-radius: 1rem;
     color: white;
+    box-shadow: inset 0px 1px 14px 3px black;
+    cursor: pointer;
 
+}
+.card:active{
+    opacity: .6;
 }
 
 .number {
@@ -72,20 +91,15 @@ body{
     max-width: 100%;
     height: 70px;
 }
-
-button{
+  
+.pokebola{
+    width: 55px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 7px;
-    padding: 7px;
-    
-    
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
 }
-
+.pokebola:active{
+    opacity: .5;
+}

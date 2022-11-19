@@ -4,6 +4,10 @@
         height: auto;
         margin: 1rem auto;
     }
+    .body{
+        width: 100vw;
+        margin-top: -16px;
+    }
     
 }
 @media screen and (min-width: 380px){
@@ -12,7 +16,6 @@
     }
     
 }
-
 
 @media screen and (min-width: 576px){
     .pokemons{
@@ -34,4 +37,13 @@
     button:active{
         opacity: .3;
     }
+}
+
+/* para celular na horizontal */
+
+@media screen and ( min-width: 576px) and (orientation: landscape) {
+    .body{
+        width: 100vw;
+    }
+    
 }
