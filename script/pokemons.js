@@ -2,7 +2,7 @@ class pokemons {
     name;
     number;
     type;
-    color;
+    types = [];
     photo;    
 }
 

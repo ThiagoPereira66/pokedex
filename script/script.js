@@ -1,30 +1,39 @@
+const pokemonList = document.getElementById('pokemonList') //para importar do HTML oq eu quero adicionar
+const pokebola = document.getElementsByClassName('pokebola')[0]
+const limit = 5;
+let offset = 1;
+
+
+
 
 
 // função para mostrar oq eu quero converter e retornar
-function convertPokemonToLi(pokemon){
-   return `<li class="card">
-                <span class="number">${pokemon.namber}</span>
+function loadPokemons(offset, limit ) {    
+       pokeApi.getPokemons( offset, limit).then((pokemons = []) =>{     //agora fazendo a introdução dos elementos/ paginação
+            const newHtml = pokemons.map((pokemon) =>   
+            `<li class="card ${pokemon.type}">
+                <span class="number">#${pokemon.number}</span>
                 <span class="name">${pokemon.name}</span>
                 <div class="imagens">
-                    <ol class="types">
-                        <li class="type">grass</li>
-                        <li class="type">poison</li>
-                    </ol>
-                    <img src="./img/${pokemon.name}.png" alt="${pokemon.name}">
+                <ol class="types">
+                ${pokemon.types.map((type) =>`<li class="type">${type}</li>`).join('')} 
+                
+                </ol>
+                <img src="${pokemon.photo}" alt="${pokemon.name}">
                 </div>
-            </li>
-    
-    `
+                </li>
+                
+                `
+            ).join('')
+        pokemonList.innerHTML += newHtml // linca o html (pokemons.map) mapear o conteudo "join('')" cria um novo arquivo
+    })
+   
 }
 
-const pokemonList = document.getElementById('pokemonList') //para importar do HTML oq eu quero adicionar
+loadPokemons(offset, limit)
 
-
-pokeApi.getPokemons().then((pokemons = []) =>{     //agora fazendo a introdução dos elementos
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('') // linca o html (pokemons.map) mapear o conteudo "join('')" cria um novo arquivo
-})
+pokebola.addEventListener('click', () => {
+    offset += limit
+    loadPokemons(offset, limit)
   
-
-    
-
-
+})
