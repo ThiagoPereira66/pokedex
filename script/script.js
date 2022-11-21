@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList') //para importar do HTML oq eu quero adicionar
 const pokebola = document.getElementsByClassName('pokebola')[0]
+const botao = document.getElementById('botao')
 const limit = 5;
 let offset = 1;
 
@@ -25,7 +26,7 @@ function loadPokemons(offset, limit ) {
                 
                 `
             ).join('')
-        pokemonList.innerHTML += newHtml // linca o html (pokemons.map) mapear o conteudo "join('')" cria um novo arquivo
+        pokemonList.innerHTML += newHtml // linca o html e "+= newHTML" adiciona outro aruivo html 
     })
    
 }
@@ -34,6 +35,16 @@ loadPokemons(offset, limit)
 
 pokebola.addEventListener('click', () => {
     offset += limit
-    loadPokemons(offset, limit)
-  
+    loadPokemons(offset,limit)
 })
+
+// para volta AO TOPO
+botao.addEventListener('click' , () => {
+           
+    window.scrollTo ({
+    top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+})
+

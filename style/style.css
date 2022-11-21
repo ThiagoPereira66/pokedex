@@ -19,6 +19,7 @@ h1{
     font-size: 27px;
 }
 
+
 .content {
     padding: 1rem;
     height: 100vh;
@@ -101,6 +102,16 @@ h1{
 }
 .pokebola:active{
     opacity: .5;
+}
+
+button{
+    display: block;
+    position: relative;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer; 
+    
 }
 
 .normal{
